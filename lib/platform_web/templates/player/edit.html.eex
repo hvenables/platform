@@ -20,7 +20,9 @@
   <%= error_tag f, :password %>
 
   <div>
-    <%= submit "Save" %>
+    <%= submit "Save", class: 'button' %>
+    <%= link "Delete", to: Routes.player_path(@conn, :delete, @player), method: :delete, data: [confirm: "Are you sure?"], class: "button" %>
+    <%= link "Back", to: Routes.player_path(@conn, :index), class: "button" %>
   </div>
 <% end %>
 
